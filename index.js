@@ -4,7 +4,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const expressHandlebars = require('express-handlebars');
 const employeeController = require('./controller/employeeController');
-const categoryController = require('./controller/categoryController');
 const productController = require('./controller/productController');
 
 var app = express();
@@ -32,18 +31,6 @@ app.get('/', function (req, res) {
 })
 app.set('view engine', 'hbs');
 
-// app.get('/products', (req, res) => {
-//     res.render('products');
-// });
-// app.get('/addproduct', (req, res) => {
-//     res.render('addproduct');
-// });
-// app.get('category/category', (req, res) => {
-//     res.render('category');
-// });
-// app.get('/addcategory', (req, res) => {
-//     res.render('addcategory');
-// });
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
@@ -51,5 +38,4 @@ app.listen(port, () => {
 })
 
 app.use('/employee', employeeController);
-app.use('/category', categoryController);
 app.use('/product', productController);

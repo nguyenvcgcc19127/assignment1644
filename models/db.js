@@ -9,5 +9,4 @@ mongoose.connect(url,{useNewUrlParser:true},(err) => {
 })
 
 require('./employee.model');
-require('./category.model');
 require('./product.model');
