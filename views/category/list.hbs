@@ -1,0 +1,33 @@
+<h3>
+    <a href="/category" class="btn btn-danger">
+        <i class="fa fa-plus"> </i> Create New
+    </a>
+    Category List
+</h3>
+<table class="table table-striped">
+    <thead>
+        <tr align='center'>
+            <th>ID</th>
+            <th>Category Name</th>
+            <th>Desciption</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr align='center'>
+            <td>{{this.ID}}</td>
+            <td>{{this.Category_Name}}</td>
+            <td>{{this.Desciption}}</td>
+            <td><a class="fa fa-pencil fa-lg" aria-hidden="true" href="/category/{{this._id}}"></a>
+            </td>
+            <td >
+                <i class="fa fa-trash fa-lg" aria-hidden="true" href="/category/delete/{{this._id}}"
+                    onclick="return confirm('Are you sure to delete this record?');">
+                </i>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
