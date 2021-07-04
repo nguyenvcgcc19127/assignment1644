@@ -11,7 +11,7 @@
             <th style="width: 50px;">Product ID</th>
             <th>Product Name</th>
             <th>Quantity</th>
-            <th>Price</th>
+            <th>Price ($)</th>
             <th>Description</th>
             <th>Illustration</th>
             <th style="width: 20px;">Edit</th>
@@ -27,9 +27,9 @@
             <td>{{this.Price}}</td>
             <td>{{this.Description}}</td>
             <td><img src="/{{this.imagename}}" alt="Illustration image" style="width: 150px; height: auto;"></td>
-            <td align='center'><a class="fa fa-pencil fa-lg" aria-hidden="true" href="/product/{{this._id}}"></a>
+            <td><a class="fa fa-pencil fa-lg" aria-hidden="true" href="/product/{{this._id}}"></a>
             </td>
-            <td align='center'>
+            <td>
                 <a class="fa fa-trash fa-lg" aria-hidden="true" href="/product/delete/{{this._id}}"
                     onclick="return confirm('Are you sure to delete this record?');">
                 </a>

@@ -8,10 +8,10 @@ var productSchema = new mongoose.Schema({
         type: String
     },
     Quantity: {
-        type: String
+        type: Number
     },
     Price: {
-        type: String
+        type: Number
     },
     Description: {
         type: String

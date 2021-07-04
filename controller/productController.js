@@ -41,9 +41,6 @@ function insertRecord(req, res) {
     product.Price = req.body.Price;
     product.Description = req.body.Description;
     product.imagename = req.file.filename;
-    // product.ID = req.body.ID;
-    // product.Image = req.body.Image;
-
     product.save((err, doc) => {
         if (!err) {
             res.redirect('product/list');
@@ -60,6 +57,9 @@ function insertRecord(req, res) {
         }
     })
 }
+
+
+
 
 function updateRecord(req, res) {
     Product.findOneAndUpdate({ _id: req.body._id, }, {Product_ID: req.body.Product_ID, 

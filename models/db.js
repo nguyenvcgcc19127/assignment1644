@@ -7,6 +7,4 @@ mongoose.connect(url,{useNewUrlParser:true},(err) => {
         console.log("An Error Occured");
     } 
 })
-
-require('./employee.model');
 require('./product.model');
